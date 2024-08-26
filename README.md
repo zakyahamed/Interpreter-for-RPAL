@@ -1,14 +1,36 @@
 # RPAL Interpreter
+This repository contains a lexical analyser and parser for the RPAL language.
 
-This repository contains a lexical analyser and parser for the RPAL language, built for CS3513: Programming Languages.
+### Team members:
+- Kopimenon
+- Zaky Ahamed
 
-<h3>Problem Statement</h3>
-The project requirement was to implement a lexical analyzer and a parser for the RPAL language. The output of the parser should be the Abstract Syntax Tree (AST) for the given input program. Then an algorithm must be implemented to convert the Abstract Syntax Tree (AST) into Standardize Tree (ST) and the CSE machine should be implemented. The program should be able to read an input file that contains an RPAL program. The output of the program should match the output of “rpal.exe“ for the relevant program.
+### Problem Statement
 
-<h3>Program Execution Instructions</h3>
-The following sequence of commands can be used in the root of the project directory to compile the program and execute rpal programs:
+The project requirement involves implementing a lexical analyzer and parser for the RPAL language. The parser's output should be an Abstract Syntax Tree (AST) corresponding to the given input program. Additionally, you need to implement an algorithm to convert the AST into a Standardized Tree (ST) and develop a CSE machine. The program must be capable of reading an input file containing an RPAL program, and the output should align with the results produced by "rpal.exe" for the corresponding program.
+
+### Program Execution Instructions
+
+The following sequence of commands can be used in the root of the project directory
+to compile the program and execute rpal programs:
 ```
-git status
-git add
-git commit
+> make
+> ./rpal20 file_name
 ```
+To generate the Abstract Syntax Tree:
+```
+> ./rpal20 -ast file_name
+```
+To generate the Standardized Tree:
+```
+> ./rpal20 -st file_name
+```
+
+### Structure of the Project
+
+This project was coded entirely in C++. It consists of mainly 5 files. They are,
+1. main.cpp
+2. parser.h
+3. tree.h
+4. token.h
+5. environment.h
